@@ -1,17 +1,15 @@
 # test only concrete implementations of the engine and battery classes for this task
 # may assume all inputs to the system are valid 
 # (i.e all parameters are the expected type and all values are within reasonable bounds).
-import sys
-sys.path.append('..')
 
 import unittest
 from datetime import datetime
-import batteries
+import parts.batteries as batteries
 
 class TestSpindler(unittest.TestCase):
     def test_needs_service(self):
         current_date = datetime.today().date()
-        last_service_date = current_date.replace(year=current_date.year - 3)
+        last_service_date = current_date.replace(year=current_date.year - 4)
 
         battery = batteries.SpindlerBattery(last_service_date, current_date)
         self.assertTrue(battery.needs_service())

@@ -2,8 +2,8 @@ from abc import ABC, abstractmethod
 from serviceable import Serviceable
 from datetime import datetime
 from car import Car
-import engines
-import batteries
+import parts.engines as engines
+import parts.batteries as batteries
 
 class CarFactory:
 

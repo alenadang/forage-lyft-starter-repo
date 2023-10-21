@@ -2,12 +2,9 @@
 # may assume all inputs to the system are valid 
 # (i.e all parameters are the expected type and all values are within reasonable bounds).
 
-import sys
-sys.path.append('..')
-
 import unittest
 from datetime import datetime
-import engines
+from parts import engines
 
 class TestCapulet(unittest.TestCase):
     def test_needs_service(self):
